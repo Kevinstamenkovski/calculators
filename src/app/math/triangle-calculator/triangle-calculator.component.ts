@@ -14,9 +14,9 @@ export class TriangleCalculatorComponent implements OnInit {
   perimeter: number = 0;
   area: number = 0;
   constructor() {
-    this.BaseFormControl = new FormControl('');
-    this.SecondSideFormControl = new FormControl('');
-    this.ThirdSideFormControl = new FormControl('');
+    this.BaseFormControl = new FormControl(0);
+    this.SecondSideFormControl = new FormControl(0);
+    this.ThirdSideFormControl = new FormControl(0);
     this.HeightFormControl = new FormControl('');
   }
   public calculate(): void{
