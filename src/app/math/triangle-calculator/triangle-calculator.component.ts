@@ -16,10 +16,10 @@ export class TriangleCalculatorComponent implements OnInit {
   public addDisplay: string = '';
   public disInput: string = '';
   constructor() {
-    this.BaseFormControl = new FormControl(0);
-    this.SecondSideFormControl = new FormControl(0);
-    this.ThirdSideFormControl = new FormControl(0);
-    this.HeightFormControl = new FormControl(0);
+    this.BaseFormControl = new FormControl('');
+    this.SecondSideFormControl = new FormControl('');
+    this.ThirdSideFormControl = new FormControl('');
+    this.HeightFormControl = new FormControl('');
   }
   public calculate(): void{
     this.perimeter = parseFloat(this.BaseFormControl.value) + parseFloat(this.SecondSideFormControl.value) + parseFloat(this.ThirdSideFormControl.value);
@@ -27,7 +27,7 @@ export class TriangleCalculatorComponent implements OnInit {
     this.addDisplay = 'display: block;';
   }
   public reset(): void{
-    window.location.reload();
+    this.addDisplay = 'display: none;';
   }
   ngOnInit(): void {}
 }
