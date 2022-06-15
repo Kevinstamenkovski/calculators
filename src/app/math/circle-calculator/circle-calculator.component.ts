@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from "@angular/forms";
 
 @Component({
   selector: 'app-circle-calculator',
@@ -6,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./circle-calculator.component.scss']
 })
 export class CircleCalculatorComponent implements OnInit {
-
-  constructor() { }
-
+  radiusFormControl: FormControl;
+  addDisplay: string = 'display: none;';
+  perimeter: number = 0;
+  area: number = 0;
+  constructor() {
+    this.radiusFormControl = new FormControl(0)
+  }
+  public calculate(): void{
+    this.addDisplay = 'display: block;';
+  }
+  public reset(): void{
+    window.location.reload();
+  }
   ngOnInit(): void {
   }
 
