@@ -6,22 +6,32 @@
 
   <mat-form-field class="example-full-width" appearance="fill">
     <mat-label>Input Side 1 (Base)</mat-label>
-    <input type="text" matInput [formControl]="BaseFormControl" placeholder="Input Side 1">
+    <input type="number" matInput [formControl]="BaseFormControl" placeholder="Input Side 1">
   </mat-form-field>
   <mat-form-field class="example-full-width" appearance="fill">
     <mat-label>Input Side 2</mat-label>
-    <input type="text" matInput [formControl]="SecondSideFormControl" placeholder="Input Side 2">
+    <input type="number" matInput [formControl]="SecondSideFormControl" placeholder="Input Side 2">
   </mat-form-field>
   <mat-form-field class="example-full-width" appearance="fill">
     <mat-label>Input Side 3</mat-label>
-    <input type="text" matInput [formControl]="ThirdSideFormControl" placeholder="Input Side 3">
+    <input type="number" matInput [formControl]="ThirdSideFormControl" placeholder="Input Side 3">
   </mat-form-field>
   <mat-form-field class="example-full-width" appearance="fill">
     <mat-label>Input Height</mat-label>
-    <input type="text" matInput [formControl]="HeightFormControl" placeholder="Input Height">
+    <input type="number" matInput [formControl]="HeightFormControl" placeholder="Input Height">
   </mat-form-field>
 
 
 </form>
 <button (click)="calculate()">Calculate</button> <br>
-The perimeter is: {{perimeter}}
+
+
+<div class="imgClass" style="{{addDisplay}}">
+  <h2>{{BaseFormControl.value}}</h2>
+  <h2>{{SecondSideFormControl.value}}</h2>
+  <h2>{{ThirdSideFormControl.value}}</h2>
+  <img height="200px" src="../../../assets/triangle.jpg" alt="triangle">
+  The perimeter is: {{perimeter}} <br>
+  The Area Is: {{area}}
+</div>
+

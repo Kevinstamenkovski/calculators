@@ -1,0 +1,21 @@
+.imgClass{
+  display: none;
+  *{
+    position: absolute;
+  }
+  *:nth-child(1){
+    z-index: 1;
+    color: coral;
+    margin: 170px 0 0 90px;
+  }
+  *:nth-child(2){
+    z-index: 1;
+    color: coral;
+    margin: 75px 0 0 38px;
+  }
+  *:nth-child(3){
+    z-index: 1;
+    color: coral;
+    margin: 75px 0 0 145px;
+  }
+}
