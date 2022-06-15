@@ -14,6 +14,7 @@ export class TriangleCalculatorComponent implements OnInit {
   perimeter: number = 0;
   area: number = 0;
   public addDisplay: string = '';
+  public disInput: string = '';
   constructor() {
     this.BaseFormControl = new FormControl(0);
     this.SecondSideFormControl = new FormControl(0);
@@ -24,6 +25,9 @@ export class TriangleCalculatorComponent implements OnInit {
     this.perimeter = parseFloat(this.BaseFormControl.value) + parseFloat(this.SecondSideFormControl.value) + parseFloat(this.ThirdSideFormControl.value);
     this.area = parseFloat(this.BaseFormControl.value) * parseFloat(this.HeightFormControl.value) / 2;
     this.addDisplay = 'display: block;';
+  }
+  public reset(): void{
+    window.location.reload();
   }
   ngOnInit(): void {}
 }
