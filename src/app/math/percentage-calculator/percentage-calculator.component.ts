@@ -9,15 +9,31 @@ import {FormControl} from "@angular/forms";
 export class PercentageCalculatorComponent implements OnInit {
   PercentFormControl: FormControl;
   IntNumberFormControl: FormControl;
+  ResultFormControl: FormControl;
   public addDisplay: string = 'display: none;';
   result: number = 0;
+  finalResult: string = '';
   constructor() {
-    this.PercentFormControl = new FormControl('');
-    this.IntNumberFormControl = new FormControl('');
+    this.PercentFormControl = new FormControl(0);
+    this.IntNumberFormControl = new FormControl(0);
+    this.ResultFormControl = new FormControl(0);
   }
   public calculate(): void{
-    this.result = parseFloat(this.IntNumberFormControl.value) / 100 * parseFloat(this.PercentFormControl.value);
-    this.addDisplay = 'display: block;'
+
+    if(this.IntNumberFormControl.value != 0 && this.PercentFormControl.value != 0 && this.ResultFormControl.value == 0){
+      this.result = parseFloat(this.IntNumberFormControl.value) / 100 * parseFloat(this.PercentFormControl.value);
+      this.finalResult = this.PercentFormControl.value + "% OF " + this.IntNumberFormControl.value + " IS " + this.result;
+    }else if(this.IntNumberFormControl.value != 0 && this.ResultFormControl.value != 0 && this.PercentFormControl.value == 0){
+      this.result = parseFloat(this.IntNumberFormControl.value) / parseFloat(this.ResultFormControl.value) * 100;
+      this.finalResult = "The % OF " + this.IntNumberFormControl.value + " OF " + this.ResultFormControl.value + " IS " + this.result + "%";
+    }else if(this.ResultFormControl.value != 0 && this.PercentFormControl.value != 0 && this.IntNumberFormControl.value == 0){
+      this.result = parseFloat(this.ResultFormControl.value) / parseFloat(this.PercentFormControl.value) * 100;
+      this.finalResult = this.ResultFormControl.value + " IS THE " + this.PercentFormControl.value + "% OF " + this.result;
+    }else{
+      this.finalResult = "You Have to put at least 2 inputs";
+    }
+
+   this.addDisplay = 'display: block;'
   }
 
   ngOnInit(): void {
