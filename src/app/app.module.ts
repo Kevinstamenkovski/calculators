@@ -8,13 +8,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import { PercentageCalculatorComponent } from './math/percentage-calculator/percentage-calculator.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    calculators,
-    PercentageCalculatorComponent
+    calculators
   ],
   imports: [
     BrowserModule,
