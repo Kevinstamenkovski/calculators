@@ -1,2 +1,20 @@
-<p>percentage-calculator works!</p>
+<div class="card">
+  <form class="example-form">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Input Radius</mat-label>
+      <input type="number" matInput [formControl]="PercentFormControl" placeholder="Input Percentage">
+    </mat-form-field>
 
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Input Radius</mat-label>
+      <input type="number" matInput [formControl]="IntNumberFormControl" placeholder="Input Integer">
+    </mat-form-field>
+  </form>
+</div>
+<button (click)="calculate()">CALCULATE</button>
+
+
+
+<div style="{{addDisplay}}">
+  <h2>{{PercentFormControl.value}}% Of {{IntNumberFormControl.value}} Is {{result}}</h2>
+</div>
