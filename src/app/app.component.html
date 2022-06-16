@@ -1,14 +1,21 @@
 
 
-<button mat-button [matMenuTriggerFor]="menu">MATH</button>
-<mat-menu #menu="matMenu">
-  <a routerLinkActive="activeLink" routerLink="/triangle"><button mat-menu-item>Triangle Calculator</button></a>
-  <a routerLinkActive="activeLink" routerLink="/circle"><button mat-menu-item>Circle Calculator</button></a>
-  <a routerLinkActive="activeLink" routerLink="/percentage"><button mat-menu-item>Percentage Calculator</button></a>
-</mat-menu>
+
+  <button mat-button [matMenuTriggerFor]="menu">MATH</button>
+  <mat-menu #menu="matMenu">
+    <a routerLinkActive="activeLink" routerLink="/triangle"><button mat-menu-item>Triangle Calculator</button></a>
+    <a routerLinkActive="activeLink" routerLink="/circle"><button mat-menu-item>Circle Calculator</button></a>
+    <a routerLinkActive="activeLink" routerLink="/percentage"><button mat-menu-item>Percentage Calculator</button></a>
+  </mat-menu>
 
 
-
+  <button mat-button [matMenuTriggerFor]="menu">FITNESS</button>
+  <mat-menu #menu="matMenu">
+    <a routerLinkActive="activeLink" routerLink="/bmi"><button mat-menu-item>BMI Calculator</button></a>
+    <a routerLinkActive="activeLink" routerLink="/bmr"><button mat-menu-item>BMR Calculator</button></a>
+    <a routerLinkActive="activeLink" routerLink="/body-fat"><button mat-menu-item>Body Fat Calculator</button></a>
+    <a routerLinkActive="activeLink" routerLink="/ideal-weight"><button mat-menu-item>Ideal Weight Calculator</button></a>
+  </mat-menu>
 
 
 

@@ -9,20 +9,12 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { MatMenuModule} from "@angular/material/menu";
-import { BMICalculatorComponent } from './fitness/bmi-calculator/bmi-calculator.component';
-import { BMRCalculatorComponent } from './fitness/bmr-calculator/bmr-calculator.component';
-import { IdealWeightCalculatorComponent } from './fitness/ideal-weight-calculator/ideal-weight-calculator.component';
-import { BodyFatCalculatorComponent } from './fitness/body-fat-calculator/body-fat-calculator.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    calculators,
-    BMICalculatorComponent,
-    BMRCalculatorComponent,
-    IdealWeightCalculatorComponent,
-    BodyFatCalculatorComponent
+    calculators
   ],
   imports: [
     BrowserModule,
