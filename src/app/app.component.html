@@ -1,6 +1,18 @@
-<a routerLinkActive="activeLink" routerLink="/triangle">Triangle</a>
-<a routerLinkActive="activeLink" routerLink="/circle">circle</a>
-<a routerLinkActive="activeLink" routerLink="/percentage">Percentage</a>
+
+
+<button mat-button [matMenuTriggerFor]="menu">MATH</button>
+<mat-menu #menu="matMenu">
+  <a routerLinkActive="activeLink" routerLink="/triangle"><button mat-menu-item>Triangle Calculator</button></a>
+  <a routerLinkActive="activeLink" routerLink="/circle"><button mat-menu-item>Circle Calculator</button></a>
+  <a routerLinkActive="activeLink" routerLink="/percentage"><button mat-menu-item>Percentage Calculator</button></a>
+</mat-menu>
+
+
+
+
+
+
+
 
 <router-outlet></router-outlet>
 
