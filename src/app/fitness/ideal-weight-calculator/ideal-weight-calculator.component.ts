@@ -31,6 +31,9 @@ export class IdealWeightCalculatorComponent implements OnInit {
     }else if(this.femaleS){
       this.result = (45.5 + (.91 * (this.HeightFormControl.value - 152.4)));
     }
+    if(this.result < 0){
+      this.result = 0;
+    }
     this.output = this.result.toFixed(1) + " Kg";
   }
 
