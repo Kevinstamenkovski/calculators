@@ -18,7 +18,7 @@ export class BMICalculatorComponent implements OnInit {
     this.AgeFormControl = new FormControl( 0);
   }
   public calculate(): void{
-    this.result = parseFloat(this.WeightFormControl.value) / (Math.pow(parseFloat(this.HeightFormControl.value), 2) /100);
+    this.result = parseFloat(this.WeightFormControl.value) / (Math.pow(parseFloat(this.HeightFormControl.value), 2) /10000);
     if(this.result < 16){
       this.output = this.result + " Severe Thinness";
     }else if(this.result < 17){
