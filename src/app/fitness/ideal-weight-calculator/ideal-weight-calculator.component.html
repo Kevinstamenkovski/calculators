@@ -1,1 +1,35 @@
-<p>ideal-weight-calculator works!</p>
+<div class="card" style="display: flex; flex-direction: column;">
+
+  <form style="border-radius: 15px; display: flex; justify-content: center;">
+    <mat-form-field class="example-full-width" appearance="fill" style="margin: 5px 0 0 5px;">
+      <mat-label>Input Age</mat-label>
+      <input type="number" matInput [formControl]="AgeFormControl" placeholder="Input your Age">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill" style="margin: 5px 0 0 5px;">
+      <mat-label>Input Height</mat-label>
+      <input type="number" matInput [formControl]="HeightFormControl" placeholder="Input your Height">
+    </mat-form-field>
+  </form>
+  <br>
+  <div class="line" style="width: 100%; display: flex; justify-content: space-around; align-items: center">
+    <div style="justify-self: center;">
+      <mat-label>Male</mat-label>
+      <input type="radio" (click)="maleSelected()" name="gender" checked>
+    </div>
+
+    <div>
+      <mat-label>Female</mat-label>
+      <input type="radio" (click)="femaleSelected()" name="gender">
+    </div>
+
+    <div>
+
+    </div>
+
+  </div>
+  <br>
+  <button style="width: 25%; align-self: center;" (click)="calculate()">CALCULATOR</button>
+  <h3 style="align-self: center; margin-top: 10px;">{{output}}</h3>
+</div>
+
