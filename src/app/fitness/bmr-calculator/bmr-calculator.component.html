@@ -15,12 +15,12 @@
   <div class="line" style="width: 100%; display: flex; justify-content: space-around; align-items: center">
     <div style="justify-self: center;">
       <mat-label>Male</mat-label>
-      <input type="radio" [formControl]="maleSelected" name="gender">
+      <input type="radio" (click)="maleSelected()" name="gender" checked>
     </div>
 
     <div>
       <mat-label>Female</mat-label>
-      <input type="radio" [formControl]="femaleSelected" name="gender">
+      <input type="radio" (click)="femaleSelected()" name="gender">
     </div>
 
     <div>
@@ -32,6 +32,6 @@
 
   </div>
   <button style="width: 25%; align-self: center;" (click)="calculate()">CALCULATOR</button>
-
+  {{output}}
 </div>
 
