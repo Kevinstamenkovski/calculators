@@ -1,4 +1,14 @@
-
+<mat-sidenav-container fullscreen>
+  <mat-sidenav #sidenav role="navigation">
+    <!--this is a place for us to add side-nav code-->
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <app-header></app-header>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>
 
 
   <button mat-button [matMenuTriggerFor]="math">MATH</button>
@@ -20,8 +30,6 @@
 
 
 
-
-<router-outlet></router-outlet>
 
 
 

@@ -9,12 +9,16 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { MatMenuModule} from "@angular/material/menu";
-
-
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { HeaderComponent } from './navigation/header/header.component';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
 @NgModule({
   declarations: [
     AppComponent,
-    calculators
+    calculators,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +31,12 @@ import { MatMenuModule} from "@angular/material/menu";
     AppRoutingModule,
     BrowserAnimationsModule,
     MatInputModule,
-    MatMenuModule
+    MatMenuModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatButtonModule,
+    MatToolbarModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
