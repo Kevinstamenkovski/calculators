@@ -1,20 +1,10 @@
-a {
+a{
   text-decoration: none;
-  color: white;
 }
-
-a:hover, a:active{
-  color: lightgray;
-}
-
 .navigation-items{
   list-style-type: none;
   padding: 0;
   margin: 0;
-}
-
-mat-toolbar{
-  border-radius: 3px;
 }
 
 @media(max-width: 959px){
@@ -22,7 +12,8 @@ mat-toolbar{
     border-radius: 0px;
   }
 }
-.activeLink > mat-menu > div {
-  color: #ffe67a;
+.activeLink{
+  color: white;
+  background: #000;
 }
 

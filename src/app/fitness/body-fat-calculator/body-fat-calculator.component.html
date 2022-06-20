@@ -1,28 +1,23 @@
-
-  <form>
+<mat-radio-group aria-label="Select an option">
+  <mat-radio-button [formControl]="maleS" (click)="maleSelect()" value="1">Male</mat-radio-button>
+  <mat-radio-button [formControl]="femaleS" (click)="femaleSelect()" value="2">Female</mat-radio-button>
+</mat-radio-group>
+  <form style="display: flex; flex-direction: column">
     <mat-form-field class="example-full-width" appearance="fill" style="margin: 5px 0 0 5px;">
       <mat-label>Input Age</mat-label>
       <input type="number" matInput [formControl]="AgeFormControl" placeholder="Input your Age">
     </mat-form-field>
     <mat-form-field class="example-full-width" appearance="fill" style="margin: 5px 0 0 5px;">
-      <mat-label>Input Age</mat-label>
+      <mat-label>Input Weight</mat-label>
       <input type="number" matInput [formControl]="WeightFormControl" placeholder="Input your Weight">
     </mat-form-field>
     <mat-form-field class="example-full-width" appearance="fill" style="margin: 5px 0 0 5px;">
-      <mat-label>Input Age</mat-label>
+      <mat-label>Input Height</mat-label>
       <input type="number" matInput [formControl]="HeightFormControl" placeholder="Input your Height">
     </mat-form-field>
-    <mat-form-field class="example-full-width" appearance="fill" style="margin: 5px 0 0 5px;">
-      <mat-label>Input Age</mat-label>
-      <input type="number" matInput [formControl]="NeckFormControl" placeholder="Input your Neck Size">
-    </mat-form-field>
-    <mat-form-field class="example-full-width" appearance="fill" style="margin: 5px 0 0 5px;">
-      <mat-label>Input Age</mat-label>
-      <input type="number" matInput [formControl]="WaistFormControl" placeholder="Input your Waist Size">
-    </mat-form-field>
-    <mat-form-field class="example-full-width" appearance="fill" style="margin: 5px 0 0 5px;">
-      <mat-label>Input Age</mat-label>
-      <input type="number" matInput [formControl]="WaistFormControl" placeholder="Input your Waist Size">
-    </mat-form-field>
+
+
   </form>
 
+<button  (click)="calculate()">CALCULATE</button>
+{{output}}

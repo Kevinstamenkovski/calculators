@@ -12,7 +12,7 @@ export class BMRCalculatorComponent implements OnInit {
   AgeFormControl: FormControl;
   public result: number = 0;
   public output: string = '';
-  public maleS: boolean = true;
+  public maleS: boolean = false;
   public femaleS: boolean = false;
   constructor() {
     this.WeightFormControl = new FormControl(0);
@@ -30,10 +30,14 @@ export class BMRCalculatorComponent implements OnInit {
   public calculate(): void{
     if (this.maleS){
       this.result = (10 * this.WeightFormControl.value) + (6.25 * this.HeightFormControl.value) - (5 * this.AgeFormControl.value + 5);
+      this.output = this.result + " Calories/Day";
     }else if(this.femaleS){
       this.result = (10 * this.WeightFormControl.value) + (6.25 * this.HeightFormControl.value) - (5 * this.AgeFormControl.value - 161);
+      this.output = this.result + " Calories/Day";
+    }else{
+      this.output = "Select Gender";
     }
-    this.output = this.result + " Calories/Day";
+
   }
 
   ngOnInit(): void {

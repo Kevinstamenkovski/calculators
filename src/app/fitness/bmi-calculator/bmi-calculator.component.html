@@ -12,23 +12,6 @@
     </mat-form-field>
   </form>
 
-  <div class="line" style="width: 100%; display: flex; justify-content: space-around; align-items: center">
-    <div style="justify-self: center;">
-      <mat-label>Male</mat-label>
-      <input type="radio" name="gender" checked>
-    </div>
-    <div>
-      <mat-label>Female</mat-label>
-      <input type="radio" name="gender">
-    </div>
-    <div>
-      <mat-form-field class="example-full-width" appearance="fill" style="margin: 5px 0 0 5px;">
-        <mat-label>Input Height</mat-label>
-        <input type="number" matInput [formControl]="AgeFormControl" placeholder="Input your Age">
-      </mat-form-field>
-    </div>
-
-  </div>
   <button style="width: 25%; align-self: center;" (click)="calculate()">CALCULATOR</button>
   {{output}}
 </div>

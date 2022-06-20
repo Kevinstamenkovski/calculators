@@ -13,14 +13,12 @@
   </form>
 
   <div class="line" style="width: 100%; display: flex; justify-content: space-around; align-items: center">
-    <div style="justify-self: center;">
-      <mat-label>Male</mat-label>
-      <input type="radio" (click)="maleSelected()" name="gender" checked>
-    </div>
-
-    <div>
-      <mat-label>Female</mat-label>
-      <input type="radio" (click)="femaleSelected()" name="gender">
+    <div style="margin-top: -5px;">
+      <mat-radio-group aria-label="Select an option">
+        <mat-radio-button (click)="maleSelected()" value="Male">Male</mat-radio-button>
+        <br> <br>
+        <mat-radio-button (click)="femaleSelected()" value="Female">Female</mat-radio-button>
+      </mat-radio-group>
     </div>
 
     <div>

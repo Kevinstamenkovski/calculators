@@ -1,11 +1,19 @@
-<mat-toolbar color="primary">
+<mat-toolbar color="warn">
   <div>
-    <button mat-button [matMenuTriggerFor]="fitness">FITNESS</button>
+    <button class="btn" mat-button [matMenuTriggerFor]="fitness">FITNESS</button>
     <mat-menu #fitness="matMenu">
-      <a routerLinkActive="activeLink" routerLink="/bmi"><button mat-menu-item>BMI Calculator</button></a>
-      <a routerLinkActive="activeLink" routerLink="/bmr"><button mat-menu-item>BMR Calculator</button></a>
-      <a routerLinkActive="activeLink" routerLink="/body-fat"><button mat-menu-item>Body Fat Calculator</button></a>
-      <a routerLinkActive="activeLink" routerLink="/ideal-weight"><button mat-menu-item>Ideal Weight Calculator</button></a>
+      <a routerLink="/bmi"><button routerLinkActive="activeLink" mat-menu-item>BMI Calculator</button></a>
+      <a routerLink="/bmr"><button routerLinkActive="activeLink" mat-menu-item>BMR Calculator</button></a>
+      <a routerLink="/body-fat"><button routerLinkActive="activeLink" mat-menu-item>Body Fat Calculator</button></a>
+      <a routerLink="/ideal-weight"><button routerLinkActive="activeLink" mat-menu-item>Ideal Weight Calculator</button></a>
+    </mat-menu>
+  </div>
+  <div>
+    <button class="btn" mat-button [matMenuTriggerFor]="math">MATH</button>
+    <mat-menu #math="matMenu">
+      <a routerLink="/triangle"><button routerLinkActive="activeLink" mat-menu-item>Triangle</button></a>
+      <a routerLink="/circle"><button routerLinkActive="activeLink" mat-menu-item>Circle</button></a>
+      <a routerLink="/percentage"><button routerLinkActive="activeLink" mat-menu-item>Percentage</button></a>
     </mat-menu>
   </div>
   </mat-toolbar>

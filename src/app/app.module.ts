@@ -14,6 +14,8 @@ import { HeaderComponent } from './navigation/header/header.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatRadioModule } from "@angular/material/radio";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,8 +37,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatSidenavModule,
     MatIconModule,
     MatButtonModule,
-    MatToolbarModule
-
+    MatToolbarModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]
