@@ -13,7 +13,7 @@ export class TriangleCalculatorComponent implements OnInit {
   HeightFormControl: FormControl;
   perimeter: number = 0;
   area: number = 0;
-  public addDisplay: string = '';
+  public addDisplay: string = 'display: none;';
   public disInput: string = '';
   constructor() {
     this.BaseFormControl = new FormControl('');
@@ -21,13 +21,22 @@ export class TriangleCalculatorComponent implements OnInit {
     this.ThirdSideFormControl = new FormControl('');
     this.HeightFormControl = new FormControl('');
   }
+
+  public check(): void{
+    if(this.BaseFormControl.value == '' || this.SecondSideFormControl.value == '' || this.ThirdSideFormControl.value == ''){
+      alert("null")
+    }
+    else{
+      this.calculate()
+    }
+  }
   public calculate(): void{
     this.perimeter = parseFloat(this.BaseFormControl.value) + parseFloat(this.SecondSideFormControl.value) + parseFloat(this.ThirdSideFormControl.value);
     this.area = parseFloat(this.BaseFormControl.value) * parseFloat(this.HeightFormControl.value) / 2;
-    this.addDisplay = 'display: block;';
+    this.addDisplay = 'display: block;'
   }
   public reset(): void{
-    this.addDisplay = 'display: none;';
+    this.addDisplay = 'display: none;'
   }
   ngOnInit(): void {}
 }

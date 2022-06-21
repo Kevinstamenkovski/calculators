@@ -15,12 +15,13 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatRadioModule } from "@angular/material/radio";
+import { MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
     AppComponent,
     calculators,
-    HeaderComponent
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,7 +39,8 @@ import { MatRadioModule } from "@angular/material/radio";
     MatIconModule,
     MatButtonModule,
     MatToolbarModule,
-    MatRadioModule
+    MatRadioModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

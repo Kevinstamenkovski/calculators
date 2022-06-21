@@ -1,5 +1,11 @@
+.title{
+  color: deeppink;
+  font-family: "Bookman Old Style";
+  font-size: 3vw;
+  margin: 1vw;
+}
 .imgClass{
-  display: none;
+  position: relative;
   *{
     position: absolute;
   }
@@ -28,4 +34,12 @@ input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+.example-full-width{
+  display: block;
+  width: 15vw;
+}
+.card-size{
+  width: max(35vw);
+  margin: 1vw;
 }

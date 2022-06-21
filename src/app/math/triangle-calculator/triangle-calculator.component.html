@@ -1,8 +1,8 @@
 <form class="example-form">
 
+<h1 class="title">Triangle Calculator</h1>
 
-
-
+<mat-card style="position: relative;" class="card-size">
 
   <mat-form-field class="example-full-width" appearance="fill">
     <mat-label>Input Side 1 (Base)</mat-label>
@@ -20,20 +20,25 @@
     <mat-label>Input Height</mat-label>
     <input type="number" matInput [formControl]="HeightFormControl" placeholder="Input Height">
   </mat-form-field>
+  <div style=" position: absolute; margin: -280px 0 0 350px;">
+    <div class="imgClass" style="{{addDisplay}}">
+      <h2>{{BaseFormControl.value}}</h2>
+      <h2>{{SecondSideFormControl.value}}</h2>
+      <h2>{{ThirdSideFormControl.value}}</h2>
+      <h2>{{HeightFormControl.value}}</h2>
+      <img height="200px" src="../../../assets/triangle.jpg" alt="triangle">
 
+      </div>
+    <div style="{{addDisplay}}">
+      <h2 style="margin-top: 220px">The perimeter is: {{perimeter}}</h2> <br>
+      <h2 style="margin-top: -30px">The Area Is: {{area}}</h2>
+    </div>
+  </div>
+
+  <button (click)="check()" mat-raised-button color="accent">CALCULATE</button>
+  <button style="margin-left: 3vw" (click)="reset()" mat-raised-button color="warn">RESET</button>
+
+</mat-card>
 
 </form>
-<button (click)="calculate()">Calculate</button>
-<button (click)="reset()">Clear</button> <br>
-
-<div class="imgClass" style="{{addDisplay}}">
-  <h2>{{BaseFormControl.value}}</h2>
-  <h2>{{SecondSideFormControl.value}}</h2>
-  <h2>{{ThirdSideFormControl.value}}</h2>
-  <h2>{{HeightFormControl.value}}</h2>
-  <img height="200px" src="../../../assets/triangle.jpg" alt="triangle">
-
-    <h2 style="margin-top: 220px">The perimeter is: {{perimeter}}</h2> <br>
-    <h2 style="margin-top: 230px">The Area Is: {{area}}</h2>
-</div>
 

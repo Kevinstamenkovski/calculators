@@ -8,12 +8,21 @@
       <a routerLink="/ideal-weight"><button routerLinkActive="activeLink" mat-menu-item>Ideal Weight Calculator</button></a>
     </mat-menu>
   </div>
+
   <div>
     <button class="btn" mat-button [matMenuTriggerFor]="math">MATH</button>
     <mat-menu #math="matMenu">
       <a routerLink="/triangle"><button routerLinkActive="activeLink" mat-menu-item>Triangle</button></a>
       <a routerLink="/circle"><button routerLinkActive="activeLink" mat-menu-item>Circle</button></a>
       <a routerLink="/percentage"><button routerLinkActive="activeLink" mat-menu-item>Percentage</button></a>
+    </mat-menu>
+  </div>
+
+  <div>
+    <button class="btn" mat-button [matMenuTriggerFor]="financial">FINANCIAL</button>
+    <mat-menu #financial="matMenu">
+      <a routerLink="/rent"><button routerLinkActive="activeLink" mat-menu-item>Rent</button></a>
+      <a routerLink="/auto-lease"><button routerLinkActive="activeLink" mat-menu-item>Auto Lease</button></a>
     </mat-menu>
   </div>
   </mat-toolbar>
