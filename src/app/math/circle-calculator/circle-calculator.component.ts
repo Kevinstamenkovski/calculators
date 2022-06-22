@@ -8,15 +8,15 @@ import { FormControl } from "@angular/forms";
 })
 export class CircleCalculatorComponent implements OnInit {
   radiusFormControl: FormControl;
-  addDisplay: string = 'display: none;';
+  addDisplay: string = 'visibility: hidden;';
   perimeter: number = 0;
   area: number = 0;
   diameter: number = 0;
   constructor() {
-    this.radiusFormControl = new FormControl('')
+    this.radiusFormControl = new FormControl('');
   }
   public calculate(): void{
-    this.addDisplay = 'display: block;';
+    this.addDisplay = 'visibility: visible;';
     this.diameter = 2 * parseFloat(this.radiusFormControl.value);
     this.perimeter = this.diameter * Math.PI;
     this.area = Math.pow(parseFloat(this.radiusFormControl.value), 2) * Math.PI;

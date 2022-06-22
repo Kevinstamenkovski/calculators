@@ -1,20 +1,29 @@
-<mat-card>
+<h1 class="title">CIRCLE CALCULATOR</h1>
+<mat-card style="margin: 2vw; width: 35vw; height: 35vh; position: relative">
   <form class="example-form">
     <mat-form-field class="example-full-width" appearance="fill">
       <mat-label>Input Radius</mat-label>
       <input type="number" matInput [formControl]="radiusFormControl" placeholder="Input Radius">
     </mat-form-field>
   </form>
+  <div style="{{addDisplay}} position: absolute;">
+    <div class="imgClass" style="margin: -45px 0 0 250px;">
+      <h2>{{radiusFormControl.value}}</h2>
+      <img height="200px" src="../../../assets/circle.jpg" alt="triangle">
+    </div>
+    <div style="margin: -120px 0 0 0;">
+      <div style="position:relative; margin-top: 20vh">
+        <h2 style="position: absolute; margin-top: -25px">The Diameter Is: {{diameter}}</h2><br>
+        <h2 style="position:absolute;">The perimeter is: {{perimeter}}</h2> <br>
+        <h2 style="position:absolute; margin-top: 25px">The Area Is: {{area}}</h2>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top: 20vh; position: absolute;">
+    <button mat-raised-button color="accent" (click)="calculate()">Calculate</button>
+    <button style="margin-left: 3vw" color="warn" mat-raised-button (click)="reset()">Clear</button> <br>
+  </div>
+
 </mat-card>
-<button (click)="calculate()">Calculate</button>
-<button (click)="reset()">Clear</button> <br>
 
-<div class="imgClass" style="{{addDisplay}}">
-  <h2>{{radiusFormControl.value}}</h2>
-  <img height="200px" src="../../../assets/circle.jpg" alt="triangle">
-  <h2>The Diameter Is: {{diameter}}</h2><br>
-  <h2>The perimeter is: {{perimeter}}</h2> <br>
-  <h2>The Area Is: {{area}}</h2>
-
-
-</div>
