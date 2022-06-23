@@ -1,0 +1,26 @@
+<mat-card class="card-height card-width">
+
+  <form class="example-form">
+
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Annual Rent</mat-label>
+      <input [formControl]="RentFormControl" matInput placeholder="/year" value="500">
+    </mat-form-field>
+    <br>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Monthly Debt</mat-label>
+      <input [formControl]="DebtFormControl" matInput placeholder="%" value="5">
+    </mat-form-field>
+
+
+  </form>
+
+
+  <button mat-raised-button (click)="calculate()" color="primary">Calculate</button>
+
+
+
+</mat-card>
+
