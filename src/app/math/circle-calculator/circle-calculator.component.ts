@@ -15,11 +15,18 @@ export class CircleCalculatorComponent implements OnInit {
   constructor() {
     this.radiusFormControl = new FormControl('');
   }
+  public check(): void{
+    if(this.radiusFormControl.value == ''){
+      alert("Add The Radius")
+    }else{
+      this.calculate()
+    }
+  }
   public calculate(): void{
     this.addDisplay = 'visibility: visible;';
     this.diameter = 2 * parseFloat(this.radiusFormControl.value);
-    this.perimeter = this.diameter * Math.PI;
-    this.area = Math.pow(parseFloat(this.radiusFormControl.value), 2) * Math.PI;
+    this.perimeter = parseFloat((this.diameter * Math.PI).toFixed(1));
+    this.area = parseFloat((Math.pow(parseFloat(this.radiusFormControl.value), 2) * Math.PI).toFixed(1))
   }
 
   public reset(): void{

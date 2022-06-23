@@ -7,36 +7,36 @@ import { FormControl } from "@angular/forms";
 })
 export class TriangleCalculatorComponent implements OnInit {
 
-  BaseFormControl: FormControl;
-  SecondSideFormControl: FormControl;
-  ThirdSideFormControl: FormControl;
-  HeightFormControl: FormControl;
-  perimeter: number = 0;
-  area: number = 0;
-  public addDisplay: string = 'display: none;';
-  public disInput: string = '';
+  BaseFormControl: FormControl
+  SecondSideFormControl: FormControl
+  ThirdSideFormControl: FormControl
+  HeightFormControl: FormControl
+  perimeter: number = 0
+  area: number = 0
+  public addDisplay: string = 'display: none;'
+  public disInput: string = ''
   constructor() {
-    this.BaseFormControl = new FormControl('');
-    this.SecondSideFormControl = new FormControl('');
-    this.ThirdSideFormControl = new FormControl('');
-    this.HeightFormControl = new FormControl('');
+    this.BaseFormControl = new FormControl('')
+    this.SecondSideFormControl = new FormControl('')
+    this.ThirdSideFormControl = new FormControl('')
+    this.HeightFormControl = new FormControl('')
   }
 
   public check(): void{
-    if(this.BaseFormControl.value == '' || this.SecondSideFormControl.value == '' || this.ThirdSideFormControl.value == ''){
-      alert("null")
+    if(this.BaseFormControl.value == '' || this.SecondSideFormControl.value == '' || this.ThirdSideFormControl.value == '' || this.HeightFormControl.value == ''){
+      alert("You Have To Input Some Numbers")
     }
     else{
       this.calculate()
     }
   }
   public calculate(): void{
-    this.perimeter = parseFloat(this.BaseFormControl.value) + parseFloat(this.SecondSideFormControl.value) + parseFloat(this.ThirdSideFormControl.value);
-    this.area = parseFloat(this.BaseFormControl.value) * parseFloat(this.HeightFormControl.value) / 2;
+    this.perimeter = parseFloat(this.BaseFormControl.value) + parseFloat(this.SecondSideFormControl.value) + parseFloat(this.ThirdSideFormControl.value)
+    this.area = parseFloat(this.BaseFormControl.value) * parseFloat(this.HeightFormControl.value) / 2
     this.addDisplay = 'display: block;'
   }
   public reset(): void{
-    this.addDisplay = 'display: none;'
+    window.location.reload()
   }
   ngOnInit(): void {}
 }

@@ -15,9 +15,9 @@ export class BMRCalculatorComponent implements OnInit {
   public maleS: boolean = false;
   public femaleS: boolean = false;
   constructor() {
-    this.WeightFormControl = new FormControl(0);
-    this.HeightFormControl = new FormControl(0);
-    this.AgeFormControl = new FormControl( 0);
+    this.WeightFormControl = new FormControl(75);
+    this.HeightFormControl = new FormControl(180);
+    this.AgeFormControl = new FormControl( 20);
   }
   public maleSelected(): void{
     this.maleS = true;

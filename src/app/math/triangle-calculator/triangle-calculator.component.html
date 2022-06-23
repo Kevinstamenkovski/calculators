@@ -20,24 +20,21 @@
     <mat-label>Input Height</mat-label>
     <input type="number" matInput [formControl]="HeightFormControl" placeholder="Input Height">
   </mat-form-field>
-  <div style=" position: absolute; margin: -280px 0 0 350px;">
+  <div style=" position: absolute; margin: -280px 0 0 300px;">
     <div class="imgClass" style="{{addDisplay}}">
       <h2>{{BaseFormControl.value}}</h2>
       <h2>{{SecondSideFormControl.value}}</h2>
       <h2>{{ThirdSideFormControl.value}}</h2>
       <h2>{{HeightFormControl.value}}</h2>
       <img height="200px" src="../../../assets/triangle.jpg" alt="triangle">
-
-      </div>
+    </div>
     <div style="{{addDisplay}}">
       <h2 style="margin-top: 220px">The perimeter is: {{perimeter}}</h2> <br>
       <h2 style="margin-top: -30px">The Area Is: {{area}}</h2>
     </div>
   </div>
-
   <button (click)="check()" mat-raised-button color="accent">CALCULATE</button>
   <button style="margin-left: 3vw" (click)="reset()" mat-raised-button color="warn">RESET</button>
-
 </mat-card>
 
 </form>
