@@ -30,7 +30,7 @@ export class PercentageCalculatorComponent implements OnInit {
       this.result = parseFloat(this.ResultFormControl.value) / parseFloat(this.PercentFormControl.value) * 100;
       this.finalResult = this.ResultFormControl.value + " IS THE " + this.PercentFormControl.value + "% OF " + this.result;
     }else{
-      this.finalResult = "You Have to put at least 2 inputs";
+      alert("You Must Input At least 2 Values")
     }
 
    this.addDisplay = 'display: block;'
