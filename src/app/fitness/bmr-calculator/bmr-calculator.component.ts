@@ -34,7 +34,7 @@ export class BMRCalculatorComponent implements OnInit {
   public calculate(): void{
     if (this.maleS){
       this.result = (10 * this.WeightFormControl.value) + (6.25 * this.HeightFormControl.value) - (5 * this.AgeFormControl.value + 5);
-      this.output = this.result + " Calories/Day";
+      this.output = this.result + " Calories/Day ";
     }else if(this.femaleS){
       this.result = (10 * this.WeightFormControl.value) + (6.25 * this.HeightFormControl.value) - (5 * this.AgeFormControl.value - 161);
       this.output = this.result + " Calories/Day";
