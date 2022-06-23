@@ -27,6 +27,10 @@ export class BMRCalculatorComponent implements OnInit {
     this.maleS = false;
     this.femaleS = true;
   }
+  public reset(): void{
+    window.location.reload()
+  }
+
   public calculate(): void{
     if (this.maleS){
       this.result = (10 * this.WeightFormControl.value) + (6.25 * this.HeightFormControl.value) - (5 * this.AgeFormControl.value + 5);

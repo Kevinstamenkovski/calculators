@@ -25,15 +25,14 @@ export class BodyFatCalculatorComponent implements OnInit {
 
 
 
-  public maleSelect(): void{
+
+  public reset(): void{
+    window.location.reload()
+  }
+
+  public calculate(): void{
     this.bmiCalc = parseFloat(this.WeightFormControl.value) / Math.pow(parseFloat(this.HeightFormControl.value), 2);
     this.result = (1.20 * this.bmiCalc) + (0.23 * parseFloat(this.AgeFormControl.value)) - 16.2;
-  }
-  public femaleSelect(): void{
-    this.bmiCalc = parseFloat(this.WeightFormControl.value) / Math.pow(parseFloat(this.HeightFormControl.value), 2);
-    this.result = (1.20 * this.bmiCalc) + (0.23 * parseFloat(this.AgeFormControl.value)) - 5.4;
-  }
-  public calculate(): void{
     this.output = "You are " + this.result.toFixed(0) + "% Fat";
 
   }

@@ -1,12 +1,16 @@
 .card{
   width: 30vw;
   height: 30vh;
-  background-color: #f3f3f3;
-  border-radius: 15px;
-  border: solid 2px #737373;
+  margin: 2vw;
 }
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+.title{
+  color: deeppink;
+  font-family: "Bookman Old Style";
+  font-size: 3vw;
+  margin: 2vw;
 }

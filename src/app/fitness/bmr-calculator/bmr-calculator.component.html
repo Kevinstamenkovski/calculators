@@ -1,4 +1,5 @@
-<div class="card" style="display: flex; flex-direction: column;">
+<h1 class="title">BMR CALCULATOR</h1>
+<mat-card class="card" style="display: flex; flex-direction: column;">
 
   <form style="border-radius: 15px; display: flex; justify-content: center;">
     <mat-form-field class="example-full-width" appearance="fill" style="margin: 5px 0 0 5px;">
@@ -21,7 +22,7 @@
       </mat-radio-group>
     </div>
 
-    <div>
+    <div style="margin-left: 5vw">
       <mat-form-field class="example-full-width" appearance="fill" style="margin: 5px 0 0 5px;">
         <mat-label>Input Age</mat-label>
         <input type="number" matInput [formControl]="AgeFormControl" placeholder="Input your Age">
@@ -29,7 +30,10 @@
     </div>
 
   </div>
-  <button style="width: 25%; align-self: center;" (click)="calculate()">CALCULATOR</button>
+  <div style="margin-left: 10vw">
+    <button style="margin-right: 1vw" mat-raised-button color="accent" (click)="calculate()">CALCULATOR</button>
+    <button mat-raised-button color="warn" (click)="reset()">RESET</button>
+  </div>
   {{output}}
-</div>
+</mat-card>
 

@@ -1,7 +1,6 @@
-<mat-radio-group aria-label="Select an option">
-  <mat-radio-button [formControl]="maleS" (click)="maleSelect()" value="1">Male</mat-radio-button>
-  <mat-radio-button [formControl]="femaleS" (click)="femaleSelect()" value="2">Female</mat-radio-button>
-</mat-radio-group>
+<h1 class="title">BODY FAT CALCULATOR</h1>
+<mat-card style="width: 30vw; height: 37vh">
+
   <form style="display: flex; flex-direction: column">
     <mat-form-field class="example-full-width" appearance="fill" style="margin: 5px 0 0 5px;">
       <mat-label>Input Age</mat-label>
@@ -15,9 +14,9 @@
       <mat-label>Input Height</mat-label>
       <input type="number" matInput [formControl]="HeightFormControl" placeholder="Input your Height">
     </mat-form-field>
-
-
   </form>
+  <button mat-raised-button color="accent" (click)="calculate()">CALCULATE</button>
+  <button mat-raised-button color="warn" (click)="reset()">RESET</button>
+  <h2 style="margin-left: 13vw; margin-top: -4.5vh">{{output}}</h2>
 
-<button  (click)="calculate()">CALCULATE</button>
-{{output}}
+</mat-card>

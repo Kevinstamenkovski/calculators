@@ -35,7 +35,9 @@ export class PercentageCalculatorComponent implements OnInit {
 
    this.addDisplay = 'display: block;'
   }
-
+  public reset(): void{
+    window.location.reload()
+  }
   ngOnInit(): void {
   }
 
