@@ -20,7 +20,7 @@ export class BMICalculatorComponent implements OnInit {
   }
   public calculate(): void{
     if(this.WeightFormControl.value == 0 || this.HeightFormControl.value == 0 || this.WeightFormControl.value == null || this.HeightFormControl.value == null){
-      alert("assaf")
+      alert("Fill All The Inputs")
     }else{
       this.result = (parseFloat(this.WeightFormControl.value) / (Math.pow(parseFloat(this.HeightFormControl.value), 2) /10000))
       if(this.result < 16){

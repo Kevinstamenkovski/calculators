@@ -39,7 +39,7 @@ export class BMRCalculatorComponent implements OnInit {
       this.result = (10 * this.WeightFormControl.value) + (6.25 * this.HeightFormControl.value) - (5 * this.AgeFormControl.value - 161);
       this.output = this.result + " Calories/Day";
     }else{
-      this.output = "Select Gender";
+      alert("Please Select A Gender")
     }
 
   }
