@@ -16,10 +16,14 @@ export class RentCalculatorComponent implements OnInit {
     this.RentFormControl = new FormControl('')
     this.DebtFormControl = new FormControl('')
   }
+  public reset(): void{
+    alert("reset Not Working")
+  }
   public calculate(): void{
-    this.RentFormControl = this.RentFormControl
+    alert("Calculate not Working")
   }
   ngOnInit(): void {
+
   }
 
 }

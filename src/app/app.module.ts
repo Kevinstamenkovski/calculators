@@ -16,12 +16,14 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatRadioModule } from "@angular/material/radio";
 import { MatCardModule} from '@angular/material/card';
+import { MainPageComponent } from './main/main-page/main-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     calculators,
     HeaderComponent,
+    MainPageComponent,
   ],
   imports: [
     BrowserModule,

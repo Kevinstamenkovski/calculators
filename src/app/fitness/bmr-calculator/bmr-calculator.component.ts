@@ -28,7 +28,17 @@ export class BMRCalculatorComponent implements OnInit {
     this.femaleS = true;
   }
   public reset(): void{
-    window.location.reload()
+    this.output = ''
+    setTimeout(() => {
+      this.WeightFormControl.setValue(75)
+    }, 200)
+    setTimeout(() => {
+      this.HeightFormControl.setValue(180)
+    }, 400)
+    setTimeout(() => {
+      this.AgeFormControl.setValue(20)
+    }, 600)
+
   }
 
   public calculate(): void{

@@ -1,5 +1,5 @@
 .card-width{
-  width: 25%;
+  width: 25vw;
 }
 .card-height{
   height: auto;
@@ -14,7 +14,8 @@
 }
 
 .example-full-width {
-  width: 30%;
+  width: 15vw;
+  margin-left: -1vw;
 }
 
 .example-full-width:nth-child(1) input:before {
@@ -22,4 +23,10 @@
 }
 .example-full-width:nth-child(2):before {
   content: "saiyfgsifuh";
+}
+.title{
+  color: deeppink;
+  font-family: "Bookman Old Style";
+  font-size: 3vw;
+  margin: 2vw;
 }

@@ -22,13 +22,13 @@ export class PercentageCalculatorComponent implements OnInit {
 
     if(this.IntNumberFormControl.value != '' && this.PercentFormControl.value != '' && this.ResultFormControl.value == ''){
       this.result = parseFloat(this.IntNumberFormControl.value) / 100 * parseFloat(this.PercentFormControl.value);
-      this.finalResult = this.PercentFormControl.value + "% OF " + this.IntNumberFormControl.value + " IS " + this.result;
+      this.finalResult = this.PercentFormControl.value.toFixed(1) + "% OF " + this.IntNumberFormControl.value.toFixed(1) + " IS " + this.result.toFixed(1);
     }else if(this.IntNumberFormControl.value != '' && this.ResultFormControl.value != '' && this.PercentFormControl.value == ''){
       this.result = parseFloat(this.IntNumberFormControl.value) / parseFloat(this.ResultFormControl.value) * 100;
-      this.finalResult = "The % OF " + this.IntNumberFormControl.value + " OF " + this.ResultFormControl.value + " IS " + this.result + "%";
+      this.finalResult = "The % OF " + this.IntNumberFormControl.value.toFixed(1) + " OF " + this.ResultFormControl.value.toFixed(1) + " IS " + this.result.toFixed(1) + "%";
     }else if(this.ResultFormControl.value != '' && this.PercentFormControl.value != '' && this.IntNumberFormControl.value == ''){
       this.result = parseFloat(this.ResultFormControl.value) / parseFloat(this.PercentFormControl.value) * 100;
-      this.finalResult = this.ResultFormControl.value + " IS THE " + this.PercentFormControl.value + "% OF " + this.result;
+      this.finalResult = this.ResultFormControl.value.toFixed(1) + " IS THE " + this.PercentFormControl.value.toFixed(1) + "% OF " + this.result.toFixed(1);
     }else if(this.IntNumberFormControl.value !== '' && this.PercentFormControl.value !== '' && this.ResultFormControl.value !== ''){
       alert("Too Many Inputs")
     }else{
@@ -38,6 +38,7 @@ export class PercentageCalculatorComponent implements OnInit {
    this.addDisplay = 'display: block;'
   }
   public reset(): void{
+    this.addDisplay = 'display: none;'
     setTimeout(() => {
       this.PercentFormControl.setValue('')
     }, 200)
@@ -47,7 +48,7 @@ export class PercentageCalculatorComponent implements OnInit {
     setTimeout(() => {
       this.ResultFormControl.setValue('')
     }, 600)
-    this.addDisplay = 'display: none;'
+
   }
   ngOnInit(): void {
   }
