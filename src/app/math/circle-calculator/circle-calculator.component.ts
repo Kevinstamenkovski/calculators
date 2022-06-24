@@ -30,7 +30,10 @@ export class CircleCalculatorComponent implements OnInit {
   }
 
   public reset(): void{
-    window.location.reload();
+    setTimeout(() => {
+      this.radiusFormControl.setValue('')
+    }, 300);
+    this.addDisplay = 'visibility: hidden;';
   }
   ngOnInit(): void {
   }
