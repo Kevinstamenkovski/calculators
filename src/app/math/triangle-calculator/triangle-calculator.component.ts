@@ -36,7 +36,19 @@ export class TriangleCalculatorComponent implements OnInit {
     this.addDisplay = 'display: block;'
   }
   public reset(): void{
-    window.location.reload()
+    this.addDisplay = 'display: none;'
+    setTimeout(() => {
+      this.BaseFormControl.setValue('')
+    }, 200)
+    setTimeout(() => {
+      this.HeightFormControl.setValue('')
+    }, 800)
+    setTimeout(() => {
+      this.ThirdSideFormControl.setValue('')
+    }, 600)
+    setTimeout(() => {
+      this.SecondSideFormControl.setValue('')
+    }, 400)
   }
   ngOnInit(): void {}
 }
