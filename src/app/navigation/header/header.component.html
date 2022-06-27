@@ -1,6 +1,7 @@
-<mat-toolbar color="primary" style="display: flex; justify-content: right">
+<mat-toolbar color="primary" style="display: flex; justify-content: right; align-items: center">
+  <img style="margin-right: -30px; margin-top: 20px" src="assets/logo.png" alt="logo" height="200vh">
   <div class="title">
-    <a routerLinkActive="linkActive" routerLink="/main">CALCULATORS</a>
+    <a style="color: #f63535; font-weight: bold" routerLinkActive="activeLink" routerLink="/main">CALCULATORS</a>
   </div>
   <div>
     <button class="btn" mat-button [matMenuTriggerFor]="fitness">FITNESS</button>
