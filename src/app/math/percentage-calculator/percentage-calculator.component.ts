@@ -34,8 +34,7 @@ export class PercentageCalculatorComponent implements OnInit {
     }else{
       alert("You Need At Least 2 Inputs")
     }
-
-   this.addDisplay = 'display: block;'
+    this.addDisplay = 'display: block;'
   }
   public reset(): void{
     this.addDisplay = 'display: none;'
@@ -48,9 +47,7 @@ export class PercentageCalculatorComponent implements OnInit {
     setTimeout(() => {
       this.ResultFormControl.setValue('')
     }, 600)
-
   }
   ngOnInit(): void {
   }
-
 }

@@ -10,17 +10,26 @@ import {PerfPhase} from "@angular/compiler-cli/src/ngtsc/perf";
 export class RentCalculatorComponent implements OnInit {
   DebtFormControl: FormControl
   RentFormControl: FormControl
+  emailFormControl: FormControl
   result: number = 0
   output: string = ''
   constructor() {
     this.RentFormControl = new FormControl('')
     this.DebtFormControl = new FormControl('')
+    this.emailFormControl = new FormControl()
   }
   public reset(): void{
-    alert("reset Not Working")
+    setTimeout(() => {
+      this.RentFormControl.setValue('')
+    }, 200)
+    setTimeout(() => {
+      this.DebtFormControl.setValue('')
+    }, 400)
+
   }
-  public calculate(): void{
-    alert("Calculate not Working")
+  public calculate(){
+    this.RentFormControl.value.
+    this.result = parseFloat(this.RentFormControl.value ) / 40
   }
   ngOnInit(): void {
 

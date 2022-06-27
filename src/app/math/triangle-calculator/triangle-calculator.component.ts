@@ -23,6 +23,9 @@ export class TriangleCalculatorComponent implements OnInit {
   }
 
   public check(): void{
+    if(this.BaseFormControl.value < 0 || this.SecondSideFormControl.value < 0 || this.ThirdSideFormControl.value < 0 || this.HeightFormControl.value == ''){
+
+    }
     if(this.BaseFormControl.value == '' || this.SecondSideFormControl.value == '' || this.ThirdSideFormControl.value == '' || this.HeightFormControl.value == ''){
       alert("You Have To Input Some Numbers")
     }

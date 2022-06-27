@@ -45,7 +45,7 @@ export class BodyFatCalculatorComponent implements OnInit {
     this.output = "You are " + this.result.toFixed(0) + "% Fat";
   }
   ngOnInit(): void {
-    alert()
+
   }
 
 }
