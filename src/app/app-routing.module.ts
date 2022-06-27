@@ -9,6 +9,10 @@ import {BodyFatCalculatorComponent} from "./fitness/body-fat-calculator/body-fat
 import {IdealWeightCalculatorComponent} from "./fitness/ideal-weight-calculator/ideal-weight-calculator.component";
 import {RentCalculatorComponent} from "./financial/rent-calculator/rent-calculator.component";
 import {AutoLeaseCalculatorComponent} from "./financial/auto-lease-calculator/auto-lease-calculator.component";
+import {MainPageComponent} from "./main/main-page/main-page.component";
+import {FitnessComponent} from "./main/fitness/fitness.component";
+import {MathComponent} from "./main/math/math.component";
+import {FinancialComponent} from "./main/financial/financial.component";
 
 const routes: Routes = [
   { path: 'triangle', component: TriangleCalculatorComponent},
@@ -19,7 +23,11 @@ const routes: Routes = [
   { path: 'body-fat', component: BodyFatCalculatorComponent},
   { path: 'ideal-weight', component: IdealWeightCalculatorComponent},
   { path: 'rent', component: RentCalculatorComponent},
-  { path: "auto-lease", component: AutoLeaseCalculatorComponent}
+  { path: "auto-lease", component: AutoLeaseCalculatorComponent},
+  { path: 'main', component: MainPageComponent},
+  { path: 'main-fitness', component: FitnessComponent},
+  { path: 'main-math', component: MathComponent},
+  { path: 'main-financial', component: FinancialComponent}
 ];
 
 @NgModule({
@@ -37,5 +45,6 @@ export const calculators = [
   BodyFatCalculatorComponent,
   IdealWeightCalculatorComponent,
   RentCalculatorComponent,
-  AutoLeaseCalculatorComponent
+  AutoLeaseCalculatorComponent,
+  MainPageComponent
 ]

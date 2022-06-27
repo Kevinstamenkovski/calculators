@@ -17,6 +17,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatRadioModule } from "@angular/material/radio";
 import { MatCardModule} from '@angular/material/card';
 import { MainPageComponent } from './main/main-page/main-page.component';
+import { FinancialComponent } from './main/financial/financial.component';
+import { MathComponent } from './main/math/math.component';
+import { FitnessComponent } from './main/fitness/fitness.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +27,9 @@ import { MainPageComponent } from './main/main-page/main-page.component';
     calculators,
     HeaderComponent,
     MainPageComponent,
+    FinancialComponent,
+    MathComponent,
+    FitnessComponent,
   ],
   imports: [
     BrowserModule,

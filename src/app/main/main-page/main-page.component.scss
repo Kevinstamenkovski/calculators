@@ -1,0 +1,21 @@
+a{
+  text-decoration: none;
+  color: darkorchid;
+  font-size: 1.2vw;
+}
+.container{
+  margin-top: 4vh;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  mat-card{
+    a:first-child{
+      display: block;
+      color: #924727FF;
+      font-weight: bold;
+    }
+  }
+  mat-card{
+    width: 25vw;
+  }
+}
