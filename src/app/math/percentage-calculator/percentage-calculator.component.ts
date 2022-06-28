@@ -31,8 +31,10 @@ export class PercentageCalculatorComponent implements OnInit {
       this.finalResult = this.ResultFormControl.value.toFixed(1) + " IS THE " + this.PercentFormControl.value.toFixed(1) + "% OF " + this.result.toFixed(1);
     }else if(this.IntNumberFormControl.value !== '' && this.PercentFormControl.value !== '' && this.ResultFormControl.value !== ''){
       alert("Too Many Inputs")
+      this.reset()
     }else{
       alert("You Need At Least 2 Inputs")
+      this.reset()
     }
     this.addDisplay = 'display: block;'
   }
