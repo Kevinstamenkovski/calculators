@@ -50,6 +50,8 @@ export class PercentageCalculatorComponent implements OnInit {
       this.ResultFormControl.setValue('')
     }, 600)
   }
+
   ngOnInit(): void {
+
   }
 }
