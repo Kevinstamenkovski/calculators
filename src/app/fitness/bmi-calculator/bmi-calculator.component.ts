@@ -11,6 +11,7 @@ export class BMICalculatorComponent implements OnInit {
   WeightFormControl: FormControl
   HeightFormControl: FormControl
   AgeFormControl: FormControl
+  someClass: string = '';
   public result: number = 0
   public output: string = ''
   constructor() {
@@ -36,6 +37,7 @@ export class BMICalculatorComponent implements OnInit {
       }else{
         this.output = this.result.toFixed(1) + " Obese"
       }
+      this.someClass = "active";
     }
 
   }

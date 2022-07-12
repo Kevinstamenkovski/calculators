@@ -3,7 +3,7 @@
   <form class="example-form">
     <mat-form-field class="example-full-width" appearance="fill">
       <mat-label>Input Radius</mat-label>
-      <input type="number" matInput [formControl]="radiusFormControl" placeholder="Input Radius">
+      <input type="text" matInput [formControl]="radiusFormControl" placeholder="Input Radius">
     </mat-form-field>
   </form>
   <div style="{{addDisplay}} position: absolute;">
@@ -19,9 +19,10 @@
       </div>
     </div>
   </div>
-
+  <div *ngIf="radiusFormControl.invalid && (radiusFormControl.dirty || radiusFormControl.touched)"
+       class="alert">Please type valid value</div>
   <div style="margin-top: 20vh; position: absolute;">
-    <button mat-raised-button color="accent" (click)="check()">Calculate</button>
+    <button mat-raised-button color="accent" (click)="check()" [disabled]="radiusFormControl.invalid">Calculate</button>
     <button style="margin-left: 3vw" color="warn" mat-raised-button (click)="reset()">Clear</button> <br>
   </div>
 

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from "@angular/forms";
+import {FormControl, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-circle-calculator',
@@ -13,7 +13,10 @@ export class CircleCalculatorComponent implements OnInit {
   area: number = 0;
   diameter: number = 0;
   constructor() {
-    this.radiusFormControl = new FormControl('');
+    this.radiusFormControl = new FormControl('', [
+      Validators.required,
+      Validators.pattern("^[0-9]*$")
+    ]);
   }
   public check(): void{
     if(this.radiusFormControl.value == ''){
